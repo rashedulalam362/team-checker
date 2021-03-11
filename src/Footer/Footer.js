@@ -6,8 +6,8 @@ import './Footer.css'
 
 const Footer = () => {
     return (
-        <div className="container" >
-             <div>
+        <div className="container text-centre" >
+             <div className="font">
              <FontAwesomeIcon icon={faFacebookF}/>
                 <FontAwesomeIcon icon={faTwitter}/>
                <FontAwesomeIcon icon={faGoogle}/>

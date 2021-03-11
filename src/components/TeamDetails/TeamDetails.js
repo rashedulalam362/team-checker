@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 // import { useParams } from 'react-router';
 import logo from '../../Photo/male.png'
+import logo2 from '../../Photo/female.png'
 import './TeamDetails.css'
 const TeamDetails = () => {
     const{idTeam}=useParams();
@@ -14,22 +15,27 @@ const TeamDetails = () => {
         console.log(data)
         setTeams(data.teams[0]);
     })
-    },[])
+    },[idTeam])
+    
     return (
         <div className="container ">
        
          <div className="img-container">
-         <img src={teams.strTeamBanner} alt=""/>
+         <  img src={teams.strTeamBanner} alt=""/>
          </div>
          <div className="detail">
           <div>
           <h3>{teams.strLeague}</h3>
           <h4>Country:{teams.strCountry}</h4>
           <h4>Founded:{teams.intFormedYear}</h4>
-          <h4>Gender:{teams.strGender}</h4>
+          <h4>gender:{teams.strGender}</h4>
           </div>
           <div >
-          <img src={logo} alt="" />
+          <img src={logo} alt=""/> 
+          
+            
+          
+         
           </div>
           
          </div>
